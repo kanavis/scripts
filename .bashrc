@@ -8,7 +8,7 @@ alias vibashs="$EDITOR ~/.bashrc.sec; rr"
 
 activate_venv() {
     _venv_name="$(basename $(pwd))"
-    _venv_path="~/.virtualenvs/$_venv_name"
+    _venv_path="$HOME/.virtualenvs/$_venv_name"
     if [ -e "$_venv_path" ]; then
         source "$_venv_path/bin/activate"
     else
@@ -34,4 +34,4 @@ alias ku="kubectl apply -k"
 
 
 
-test -e "~/.bashrc.sec" && . "~/.bashrc.sec"
+test -e "$HOME/.bashrc.sec" && source "$HOME/.bashrc.sec"
